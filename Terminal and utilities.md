@@ -1,3 +1,10 @@
+# General Terminal and utilities
+
+### 1.- Using Zellij terminal multiplexor
+
+Installing [Zellij](https://github.com/zellij-org/zellij)
+alias z='zellij options --theme dracula' # set at .bashrc
+
 ### Memory:
 Check for swap usage in df -h
 
