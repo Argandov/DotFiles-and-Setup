@@ -1,5 +1,6 @@
 " VIM-PLUG
-" Install plugins with plugin manager: https://github.com/junegunn/vim-plug/blob/master/plug.vim
+" Install plugins with plugin manager: (https://github.com/junegunn/vim-plug/blob/master/plug.vim) -
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " run - :PlugInstall
 " Dependencies - Git
 call plug#begin('~/.vim/plugged')
