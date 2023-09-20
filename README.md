@@ -12,6 +12,22 @@ curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dot
 ```bash
 curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dotfiles.sh | bash -s -- --all
 ```
+# TMUX
+
+If not installed, it can be found in popular repositories (APT, YUM, etc.):
+
+`sudo apt install tmux -y`
+
+Oh-my-tmux (From  https://github.com/gpakosz/.tmux) - I Updated this in 2023 ; Commands may change in the future
+
+```bash
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
+```
+
+
 # General Terminal and utilities
 
 ### 1.- Using Zellij terminal multiplexor
