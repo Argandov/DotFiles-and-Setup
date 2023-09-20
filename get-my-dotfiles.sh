@@ -5,7 +5,7 @@
 function get_bashrc() {
 		echo "Getting bashrc"
 		cp ~/.bashrc ~/.bashrc.backup && echo "bashrc backed up to $HOME/.bashrc.backup" || echo "No .bashrc present. Proceeding to download remote Vimrc file"
-		curl https://raw.githubusercontent.com/Argandov/my_dotfiles/master/.bashrc -o ~/.bashrc
+		curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/.bashrc -o ~/.bashrc
 }
 
 function get_vimrc() {
@@ -13,7 +13,7 @@ function get_vimrc() {
 		sudo apt-get install git -y
 		# Fetch .vimrc
 		cp ~/.vimrc ~/.vimrc.backup && echo ".vimrc backed up at $HOME/.vimrc.backup" || echo "No .vimrc present. Proceeding to download remote Vimrc file"
-		curl https://raw.githubusercontent.com/Argandov/my_dotfiles/master/.vimrc -o .vimrc
+		curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/.vimrc -o .vimrc
 		# Fetch vim-plug (Plugin manager)
 		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 		# Install plugins (As specified in the .vimrc already downloaded)
