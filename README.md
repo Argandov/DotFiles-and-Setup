@@ -12,6 +12,7 @@ curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dot
 ```bash
 curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dotfiles.sh | bash -s -- --all
 ```
+
 # TMUX
 
 If not installed, it can be found in popular repositories (APT, YUM, etc.):
@@ -27,6 +28,13 @@ ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 ```
 
+My custom .tmux.conf:
+
+```bash
+cd
+mv .tmux.conf .tmux.conf.original
+curl -so .tmux.conf https://raw.githubusercontent.com/Argandov/my_dotfiles/master/.tmux.conf
+```
 
 # General Terminal and utilities
 
