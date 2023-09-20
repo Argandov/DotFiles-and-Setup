@@ -112,9 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 alias l='ls -l'
-alias obsidian='~/Programs/Obsidian.AppImage --no-sandbox &'
-alias wireshark='wireshark &'
-alias journal='vim ~/Documents/notebooks/Journal.md'
 alias c=clear
 PS2='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
