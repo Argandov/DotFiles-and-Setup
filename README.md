@@ -13,6 +13,13 @@ curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dot
 curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dotfiles.sh | bash -s -- --all
 ```
 
+# Terminator
+
+```bash
+cd
+curl -so .config/terminator/config https://github.com/Argandov/my_dotfiles/raw/master/terminator.config
+```
+
 # TMUX
 
 If not installed, it can be found in popular repositories (APT, YUM, etc.):
