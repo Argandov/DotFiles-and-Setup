@@ -1,5 +1,8 @@
 # Get .Vimrc && .Bashrc files:
 1. Get .vimrc and INstall VIM Plugins:
+
+NOTE: Needs a little more tweaking. After installing the Vim Plugins, the shell needs to be reopened
+
 ```bash
 curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dotfiles.sh | bash -s -- --vimrc
 ```
