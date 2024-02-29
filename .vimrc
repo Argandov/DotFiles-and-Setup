@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive' " Vim+Git
 " Plug 'nikolvs/vim-sunbather'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale' " Linting for programming languages (Set linters)
 " ale tools: https://github.com/dense-analysis/ale#installation-with-vim-plug
 call plug#end()
