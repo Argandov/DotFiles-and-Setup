@@ -23,6 +23,11 @@ cd
 curl -so .config/terminator/config https://github.com/Argandov/my_dotfiles/raw/master/terminator.config
 ```
 
+# Neovim/Nvim
+
+[Setup Kickstart Nvim](https://github.com/nvim-lua/kickstart.nvim?tab=readme-ov-file#FAQ)
+
+
 # TMUX
 
 If not installed, it can be found in popular repositories (APT, YUM, etc.):
