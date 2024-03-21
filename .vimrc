@@ -4,6 +4,7 @@
 " run - :PlugInstall
 " Dependencies - Git
 call plug#begin('~/.vim/plugged')
+Plug 'gabrielelana/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive' " Vim+Git
@@ -19,13 +20,14 @@ call plug#end()
 """"""""""""""SETTINGS"""""""""""""""
 " colorscheme gruvbox
 " colorscheme sunbather
-colorscheme vim-monokai-tasty " From JJ
+" colorscheme vim-monokai-tasty " From JJ
 set background=dark
 
 au BufRead,BufNewFile *.md set filetype=markdown 
 "au BufRead,BufNewFile *.md colorscheme murphy
 syntax on " highlight syntax
 
+set fillchars=eob:\ 
 set ic is hls
 set relativenumber
 set hidden		" Jump into open buffers without needing to save
