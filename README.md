@@ -16,6 +16,10 @@ curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dot
 curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dotfiles.sh | bash -s -- --all
 ```
 
+# Starship
+
+Both AWS and GCLOUD modules are present at the same time. Just comment or delete the one you don't need.
+
 # Terminator
 
 ```bash
