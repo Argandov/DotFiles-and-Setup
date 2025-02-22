@@ -3,8 +3,27 @@ add_newline = false
 	# Change command timeout from 500 to 1000 ms
 command_timeout = 1000
 	# Change the default prompt format
-format = """$env_var $all"""
+#format = """$env_var $all"""
 
+format = """$fill\
+	$directory\
+	$git_branch\
+	$git_status\
+	$gcloud\
+	$env_var\
+	$cmd_duration\
+	$line_break\
+	$python\
+	$character"""
+
+# Example of Env_var (Can be useful in the future)
+[env_var]
+format = "[$env_value]($style) "
+variable = 'HTTPS_PROXY'
+default = 'no_proxy'
+
+[fill]
+symbol = " "
 	# Change the default prompt characters
 [character]
 success_symbol = "[➜](bold green)"
@@ -17,18 +36,20 @@ variable = "STARSHIP_DISTRO"
 disabled = false
 
 [hostname]
-ssh_symbol = " "
+ssh_symbol = "[ssh](bold yellow)"
 ssh_only = false
-format = " [$hostname](blue) "
+format = " [$hostname](blue)"
 disabled = false
 
 [directory]
 truncation_length = 1
 truncation_symbol = "../"
-home_symbol = " ~"
+#truncation_symbol = ""
+home_symbol = "~"
 read_only_style = "197"
-read_only = "  "
-format = "| [$path]($style)[$read_only]($read_only_style) "
+# read_only in red:
+read_only = " 🔒 "
+format = " [$path]($style)[$read_only]($read_only_style) "
 
 # SYSTEM SPECIFICS -----------------------------------------------------
 [git_branch]
@@ -39,7 +60,8 @@ truncation_symbol = "…/"
 style = "bold green"
 
 [git_status]
-format = '[\($all_status$ahead_behind\)]($style) '
+#format = '[\($all_status$ahead_behind\)]($style) '
+format = '([\[$all_status$ahead_behind\]]($style) )'
 style = "bold green"
 conflicted = "🏳"
 up_to_date = " "
@@ -92,13 +114,13 @@ format = "via [ $version]($style) "
 disabled = true
 
 [gcloud]
-detect_folders = ['gcloud']
-format = 'on ☁️  [$project]($style) '
+#format = 'on ☁️  [$project]($style) '
+format = '[$project@$region]($style) '
+#format = 'on [(\($project\))]($style) '
 
-[aws]
-detect_folders = ['aws']
-format = 'on ☁️ [$account]($style) in [$region]($style) '
-symbol = "  "
+#[aws]
+#format = 'on ☁️ [$account]($style) in [$region]($style) '
+#symbol = "  "
 
 [buf]
 symbol = " "
@@ -184,7 +206,8 @@ Unknown = " "
 Windows = "󰍲 "
 
 [package]
-symbol = "󰏗 "
+# symbol = "󰏗 "
+symbol = " Poetry "
 
 [perl]
 symbol = " "
