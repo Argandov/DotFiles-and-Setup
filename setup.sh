@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# WIP
+
 if [[ ! -d "$HOME/.config/dotfiles" ]]; then
 		mkdir -p "$HOME/.config/dotfiles"
 fi
