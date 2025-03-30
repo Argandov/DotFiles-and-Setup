@@ -2,27 +2,18 @@
 add_newline = false
 	# Change command timeout from 500 to 1000 ms
 command_timeout = 1000
+	# Change the default prompt format
 
+# MINIMALISTIC:
 #format = """$env_var $all"""
 
-format = """$fill\
-	$directory\
-	$git_branch\
-	$git_status\
-	$gcloud\
-	$env_var\
-	$cmd_duration\
-	$line_break\
-	$python\
-	$character"""
+format = """$character$directory $git_branch $git_status """
 
-# Gcloud and AWS must be set independently; this example sets GCP's current working project. If both are activated, the upper one will take precedence.
 
-# This is an example of an env var that can be displayed on prompt:
 [env_var]
-format = "[$env_value]($style) "
-variable = 'HTTPS_PROXY'
-default = 'no_proxy'
+format = "[AWS@$env_value]($style) "
+variable = 'AWS_PROFILE'
+default = 'no_aws_profile'
 
 [fill]
 symbol = " "
@@ -45,7 +36,7 @@ disabled = false
 
 [directory]
 truncation_length = 1
-truncation_symbol = "../"
+truncation_symbol = ""
 #truncation_symbol = ""
 home_symbol = "~"
 read_only_style = "197"
@@ -56,14 +47,14 @@ format = " [$path]($style)[$read_only]($read_only_style) "
 # SYSTEM SPECIFICS -----------------------------------------------------
 [git_branch]
 symbol = " "
-format = "[$symbol$branch]($style) "
+format = "[$symbol$branch]($style)"
 # truncation_length = 4
 truncation_symbol = "…/"
 style = "bold green"
 
 [git_status]
 #format = '[\($all_status$ahead_behind\)]($style) '
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\[$all_status$ahead_behind\]]($style))'
 style = "bold green"
 conflicted = "🏳"
 up_to_date = " "
@@ -116,9 +107,7 @@ format = "via [ $version]($style) "
 disabled = true
 
 [gcloud]
-#format = 'on ☁️  [$project]($style) '
 format = '[$project@$region]($style) '
-#format = 'on [(\($project\))]($style) '
 
 #[aws]
 #format = 'on ☁️ [$account]($style) in [$region]($style) '
