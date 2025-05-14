@@ -20,6 +20,18 @@ curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dot
 
 Both AWS and GCLOUD modules are present at the same time. Just comment or delete the one you don't need.
 
+# Vim
+
+Recent updates:
+
+- Leader key changed to <space> (" ")
+- Fuzzy Finder (FZF):
+    - Leader + P: File finder
+    - Leader + K: Fuzzy find open buffers
+    - Leader + t: New vim tab, opens file fuzzy finder
+    - Leader + tab: Switch between open Vim tabs
+- gw: map to Ctrl + w
+
 # Terminator
 
 ```bash
