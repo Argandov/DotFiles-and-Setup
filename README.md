@@ -16,6 +16,27 @@ curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dot
 curl -s https://raw.githubusercontent.com/Argandov/my_dotfiles/master/get-my-dotfiles.sh | bash -s -- --all
 ```
 
+# Colors + Fonts
+
+*Fonts:* Iosevka Term (NerdFonts)
+*Colors:* Base16 Black Metal Gorgoroth
+
+See [BASE16-COLORS](BASE16-COLORS) for how to set up.
+
+Yazi:
+![Yazi Gorgoroth](img/yazi-gorgoroth-base16.png)
+
+Terminal:
+![Terminal Gorgoroth](img/terminal-gorgoroth-base16.png)
+
+Neovim:
+![nvim Gorgoroth](img/nvim-gorgoroth-base16.png)
+
+# Neovim
+
+- Nvchad + Lazy Vim. 
+- Folder /nvim/ contents to be placed in $HOME/.config/nvim/
+
 # Starship
 
 Both AWS and GCLOUD modules are present at the same time. Just comment or delete the one you don't need.
@@ -38,11 +59,6 @@ Recent updates:
 cd
 curl -so .config/terminator/config https://github.com/Argandov/my_dotfiles/raw/master/terminator.config
 ```
-
-# Neovim/Nvim
-
-[Setup Kickstart Nvim](https://github.com/nvim-lua/kickstart.nvim?tab=readme-ov-file#FAQ)
-
 
 # TMUX
 
