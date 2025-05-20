@@ -34,16 +34,13 @@ Environment configuration with:
 
 !! This is for setting up the whole shell, NOT the terminal emulator.
 
+The previous step places the themes under $HOME/.base16-manager/, so we only need to source them.
+
+In `~/.zshrc`:
+
    ```bash
     source ~/.base16-manager/chriskempson/base16-shell/scripts/base16-black-metal-gorgoroth.sh
    ```
-
-5. **Activate Gorgoroth**:
-
-   ```bash
-   base16-manager install metalelf0/base16-black-metal-scheme
-   ```
-
 ---
 
 ## 3. Neovim (NVChad) Configuration
