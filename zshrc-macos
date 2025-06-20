@@ -1,4 +1,4 @@
-# INITIALIZE MY CUSTOM ALIASES & ZSHRC FILES:
+# INITIALIZE CUSTOM ALIASES & ZSHRC FILES:
 [[ -f ~/.config/zsh/aliases.zsh ]] && source ~/.config/zsh/aliases.zsh
 
 alias python=python3
@@ -6,8 +6,10 @@ alias python=python3
 alias l="ls -l"
 alias c='clear && echo'
 
-PATH="/usr/local/bin:/opt/homebrew/bin:/usr/local/go/bin/:$PATH"
+# Go, brew, VS Code on path:
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/usr/local/bin:/opt/homebrew/bin:/usr/local/go/bin/:$PATH"
 
+# Initialize starship
 if [ -n "WARP_IS_LOCAL_SHELL_SESSION" ]; then
   eval "$(starship init zsh)"
 fi
@@ -110,7 +112,6 @@ alias agility_story='fabric --pattern agility_story'
 alias create_upgrade_pack='fabric --pattern create_upgrade_pack'
 alias analyze_spiritual_text='fabric --pattern analyze_spiritual_text'
 # Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 source "$HOME/.cargo/env"
 
 # The next line updates PATH for the Google Cloud SDK.
